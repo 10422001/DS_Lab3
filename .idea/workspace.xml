@@ -11,12 +11,11 @@
       <change afterPath="$PROJECT_DIR$/../DS_Lab3/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3/DS_Lab_3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3_fin/DS_Lab_3_fin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher_humidity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/time.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher.js" beforeDir="false" afterPath="$PROJECT_DIR$/publisher_temperature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher_humidity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher_temperature.js" beforeDir="false" afterPath="$PROJECT_DIR$/publisher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subscriber.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +65,7 @@
     <configuration name="publisher_humidity.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher_humidity.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="publisher_temperature.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher_temperature.js" working-dir="$PROJECT_DIR$">
+    <configuration name="publisher.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="subscriber.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber.js" working-dir="$PROJECT_DIR$">
@@ -75,8 +74,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.subscriber.js" />
+        <item itemvalue="Node.js.publisher.js" />
         <item itemvalue="Node.js.publisher_humidity.js" />
-        <item itemvalue="Node.js.publisher_temperature.js" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686206400777</updated>
-      <workItem from="1686206401939" duration="607000" />
+      <workItem from="1686206401939" duration="3236000" />
     </task>
     <servers />
   </component>
