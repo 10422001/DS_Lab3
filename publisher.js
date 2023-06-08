@@ -5,9 +5,11 @@ function getRndInteger(min, max) {
 }
 
 randomFuncPublish = (name, min, max) => {
-    // getRndIntegerVal = getRndInteger(min, max)
-    client.publish(name, getRndInteger(min, max).toString())
-    // client.publish(name, getRndIntegerVal.toString())
+    // client.publish(name, getRndInteger(min, max).toString())
+    newName = name+" " + getRndInteger(min, max).toString()
+    client.publish(name, newName)
+    // client.publish(name, getRndInteger(min, max).toString())
+
 }
 
 setIntervalRandomName = (name, min, max, period) => {
@@ -30,11 +32,19 @@ var client = mqtt.connect('mqtt://broker.hivemq.com')
 // The luminosity less than 30
 // lux.
 client.on('connect', function () {
-    setIntervalRandomName('dom_temperature', 27, 30, 1000)
-    setIntervalRandomName('dom_soil_humidity', 50, 60, 1000)
-    setIntervalRandomName('dom_air_humidity', 70, 100, 1000)
-    setIntervalRandomName('dom_pH_ranging', 5, 7, 1000)
-    setIntervalRandomName('dom_luminosity', 0, 30, 1000)
+    periodSensors = 5000;
+    // setInterval(function () {client.publish('dom_time',
+    //     new Date(Date.now()).toISOString().replace("T"," "))
+    // }, 1000)
+    setInterval(function () {client.publish('dom_time',
+        '123123')
+    }, 1000)
+    setIntervalRandomName('dom_temperature', 27, 30, periodSensors)
+    setIntervalRandomName('dom_soil_humidity', 50, 60, periodSensors)
+    setIntervalRandomName('dom_air_humidity', 70, 100, periodSensors)
+    setIntervalRandomName('dom_pH_ranging', 5, 7, periodSensors)
+    setIntervalRandomName('dom_luminosity', 0, 30, periodSensors)
+
 
     // setInterval(function () {
     //     client.publish('dom_temperature', '1')
@@ -44,9 +54,7 @@ client.on('connect', function () {
     //     client.publish('dom_soil_humidity', '1')
     // }, 1000)
     //
-    // setInterval(function () {
-    //     client.publish('dom_air_humidity', '1')
-    // }, 1000)
+
     //
     // setInterval(function () {
     //     client.publish('dom_pH_ranging', '1')
