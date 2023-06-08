@@ -41,31 +41,72 @@ const queryDb = async (tab, val) => {
 // queryDb('sensor', 25)
 queryDb('sensor', 29)
 
+const connectDb = async () => {
+    const client = new Client(credentials)
+
+    try {
+        await client.connect()
+        // const res = await client.query("SELECT * from sensor") //console.log(res)
+        const res = await client.query("SELECT * from sensor ORDER BY timestamp ASC") //console.log(res)
+        // const res =  client.query("SELECT * from sensor") //console.log(res)
+        // console.log(res.rows[0]["timestamp"])
+        // console.log(res.rows)
+        await client.end()
+        // console.log(res.rows[0]["timestamp"])  client.end()
+        lastxItems = 30
+        for (let i = 0; i < lastxItems; i++) {
+            console.log(res.rows[i]["timestamp"] +"\t " + res.rows[i]["temperature"] +"\t " + res.rows[i]["humidity"]
+                +"\t " + res.rows[i]["luminosity"]  +"\t " + res.rows[i]["air_humidity"] )
+
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+connectDb()
 
 
 
 // OTHER FUNCTIONS
 
-chechInputData = (messageArr) => {
+light = false
+waterPump = false
+fan = false
+
+Modul2chechInputData = (messageArr) => {
     if (messageArr[1] < 27 || messageArr[1] > 30) {
         console.log("Temperature is not in range!")
+        fan = true
+    } else {
+        fan = false
     }
     if (messageArr[2] < 50 || messageArr[2] > 60) {
         console.log("Soil humidity is not in range!")
+        waterPump = true
+    }   else {
+        waterPump = false
     }
     if (messageArr[3] < 70) {
         console.log("Air humidity is not in range!")
+        waterPump = true
+    }   else {
+        waterPump = false
     }
     if (messageArr[4] < 5 || messageArr[4] > 7) {
         console.log("pH is not in range!")
     }
     if (messageArr[5] > 30) {
         console.log("Luminosity is not in range!")
+        light = true
+    }   else {
+        light = false
     }
 }
 
 // FROM POSTGRESSSS
 var mqtt = require('mqtt')
+const {rows} = require("pg/lib/defaults");
 
 var client = mqtt.connect('mqtt://broker.hivemq.com')
 // var client = mqtt.connect('mqtt://test.mosquitto.org')
@@ -96,8 +137,8 @@ client.on('connect', function () {
 // })
 client.on('message', function (topic, message) {
     messageArr = message.toString().split(" ")
-
-    chechInputData(messageArr);
+    // console.log(messageArr)
+    Modul2chechInputData(message.toString());
     insertSensor (messageArr[0].replace("T", " "),messageArr[1], messageArr[2], messageArr[3], messageArr[4], messageArr[5])
     console.log(messageArr)
 // client.on('message', function (topic, message) {
@@ -127,3 +168,5 @@ client.on('message', function (topic, message) {
 //             console.log("default: " + message.toString())
 //     }
 })
+
+connectDb()

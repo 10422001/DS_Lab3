@@ -11,18 +11,10 @@
       <change afterPath="$PROJECT_DIR$/../DS_Lab3/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3/DS_Lab_3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3_fin/DS_Lab_3_fin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher_new.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscriber_new.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/time.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/postgres.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher.js" beforeDir="false" afterPath="$PROJECT_DIR$/publisher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriber_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber_new.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,10 +81,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.publisher_new.js" />
         <item itemvalue="Node.js.subscriber_new.js" />
         <item itemvalue="Node.js.subscriber.js" />
         <item itemvalue="Node.js.index.js" />
-        <item itemvalue="Node.js.publisher_new.js" />
         <item itemvalue="Node.js.publisher.js" />
       </list>
     </recent_temporary>
@@ -106,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686206400777</updated>
       <workItem from="1686206401939" duration="6226000" />
-      <workItem from="1686212720002" duration="483000" />
+      <workItem from="1686212720002" duration="1926000" />
     </task>
     <servers />
   </component>
