@@ -11,10 +11,17 @@
       <change afterPath="$PROJECT_DIR$/../DS_Lab3/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3/DS_Lab_3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3_fin/DS_Lab_3_fin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/time.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/publisher_new.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subscriber_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber_new.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/time.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,55 +44,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.1.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.1.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dominikocsofszki/Uni/univim/DSystem/p3/DS_final_Lab3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "javascript.nodejs.core.library.configured.version": "20.1.0",
+    "javascript.nodejs.core.library.typings.version": "20.1.0",
+    "last_opened_file_path": "/Users/dominikocsofszki/Uni/univim/DSystem/p3/DS_final_Lab3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/dominikocsofszki/Uni/univim/DSystem/p3/DS_final_Lab3/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.subscriber_new.js">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node_modules/pg-protocol/dist/index.js" working-dir="$PROJECT_DIR$/node_modules/pg-protocol/dist">
+    <configuration name="dashboard.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/dashboard.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="publisher.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher.js" working-dir="$PROJECT_DIR$">
+    <configuration name="parser.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node_modules/pg-protocol/dist/parser.js" working-dir="$PROJECT_DIR$/node_modules/pg-protocol/dist">
       <method v="2" />
     </configuration>
     <configuration name="publisher_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher_new.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="subscriber.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber.js" working-dir="$PROJECT_DIR$">
+    <configuration name="subscriber_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="subscriber_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new.js" working-dir="$PROJECT_DIR$">
+    <configuration name="time.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/time.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.publisher_new.js" />
         <item itemvalue="Node.js.subscriber_new.js" />
-        <item itemvalue="Node.js.subscriber.js" />
-        <item itemvalue="Node.js.index.js" />
-        <item itemvalue="Node.js.publisher.js" />
+        <item itemvalue="Node.js.publisher_new.js" />
+        <item itemvalue="Node.js.parser.js" />
+        <item itemvalue="Node.js.time.js" />
+        <item itemvalue="Node.js.dashboard.js" />
       </list>
     </recent_temporary>
   </component>
@@ -98,11 +105,16 @@
       <option name="presentableId" value="Default" />
       <updated>1686206400777</updated>
       <workItem from="1686206401939" duration="6226000" />
-      <workItem from="1686212720002" duration="1926000" />
+      <workItem from="1686212720002" duration="7175000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/dashboard.js" />
+      </list>
+    </option>
   </component>
 </project>

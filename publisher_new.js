@@ -31,7 +31,9 @@ var client = mqtt.connect('mqtt://broker.hivemq.com')
 // lux.
 
 newMessage = () => {
-    date = new Date(Date.now()).toISOString()
+    // date = new Date(Date.now()).toISOString()
+    date = new Date(Date.now())
+    // console.log(date)
     temp = getRndInteger(27, 30).toString()
     soil = getRndInteger(50, 60).toString()
     air = getRndInteger(70, 100).toString()

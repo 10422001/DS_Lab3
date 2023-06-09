@@ -139,6 +139,7 @@ client.on('message', function (topic, message) {
     messageArr = message.toString().split(" ")
     // console.log(messageArr)
     Modul2chechInputData(message.toString());
+    // insertSensor (messageArr[0],messageArr[1], messageArr[2], messageArr[3], messageArr[4], messageArr[5])
     insertSensor (messageArr[0].replace("T", " "),messageArr[1], messageArr[2], messageArr[3], messageArr[4], messageArr[5])
     console.log(messageArr)
 // client.on('message', function (topic, message) {
@@ -169,4 +170,4 @@ client.on('message', function (topic, message) {
 //     }
 })
 
-connectDb()
+// connectDb()
