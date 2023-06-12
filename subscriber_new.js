@@ -1,47 +1,125 @@
-
-
 // const mqtt = require('mqtt')
 // const clientMQTT = mqtt.connect('mqtt://broker.hivemq.com')
 const clientMQTT = require('mqtt').connect('mqtt://broker.hivemq.com')
 clientMQTT.on('connect',
-    function () {clientMQTT.subscribe('dom');})
+    function () {
+        clientMQTT.subscribe('dom');
+    })
 
-const {db_client} = require('./db_client.js')
-light = false
-water_pump = false
-fan = false
-
-const insertSensor = async (temperature, luminosity, airHumidity, soilHumidity,light, water_pump, fan) => {
+const {client_db} = require('./db_client.js')
+let light = false
+let water_pump = false
+let fan = false
+const dateObject = new Date();
+const insertSensor = async (temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan) => {
     try {
-        await db_client.connect(); // gets connection
+        await client_db.connect(); // gets connection
+        // const result = await db_client.query('SELECT NOW()')
+        // console.log(result.rows[0])
 
-        await db_client.query(
+        await client_db.query(
             // "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity,light, water_pump, fan) VALUES ($1, $2, $3, $4, $5,$6, $7, $8)",
             "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity,light, water_pump, fan) VALUES ($1, $2, $3, $4, $5,$6, $7, $8)",
-            [temperature,temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan]); // sends queries
+            [temperature, temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan]); // sends queries
 
         return true;
     } catch (error) {
         console.error(error.stack);
         return false;
     } finally {
-        await db_client.end();
+        await client_db.end();
     }
 };
 
+const insertSensorNewAlt = async (temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan) => {
+    try {
+        await client_db.connect(); // gets connection
+        await client_db.query('BEGIN')
 
+        // const queryText = 'INSERT INTO users(name) VALUES($1) RETURNING id'
+        // const res = await client_db.query(queryText, ['brianc'])
+        // const serverTime = await client_db.query('SELECT NOW() AT TIME ZONE \'UTC\'::timestamp')
 
+        // const serverTime = await client_db.query('SELECT now()')
+        // currentDBTime = serverTime.rows[0]["now"]
+        // currentDBTime = serverTime.rows[0]["now"]
+        // console.log(currentDBTime)
+        /*       currentDBTime = dateObject.toISOString();
+               console.log(currentDBTime)
+               console.log(currentDBTime.replace('T', '\ '))
+               // currentDBTime = currentDBTime.replace('T', '\ ')
+               console.log(currentDBTime)
 
+               console.log('-----------------------------------')
+               console.log(currentDBTime, temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan)
+               console.log('-----------------------------------')
+               // temp + " " + soil + " " + air + " " + pH + " " + luminosity
+               await client_db.query(
+                   // "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity,light, water_pump, fan) VALUES ($1, $2, $3, $4, $5,$6, $7, $8)",
+                   "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity,light, water_pump, fan) VALUES (, $2, $3, $4, $5,$6, $7, $8)",
+                   [currentDBTime.replace('T', '\ '), temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan]); // sends queries
+       */
 
+        const currentDBTime = dateObject.toISOString();
 
+        await client_db.query(
+            "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES (to_timestamp($1, 'YYYY-MM-DD\"T\"HH24:MI:SS.MSZ'), $2, $3, $4, $5, $6, $7, $8)",
+            [currentDBTime, temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan]);
 
+        // const insertPhotoText = 'INSERT INTO photos(user_id, photo_url) VALUES ($1, $2)'
+        // const insertPhotoValues = [res.rows[0].id, 's3.bucket.foo']
+        // await client_db.query(insertPhotoText, insertPhotoValues)
 
+        await client_db.query('COMMIT')
+    } catch (e) {
+        await client_db.query('ROLLBACK')
+        throw e
+    } finally {
+        // client_db.end()
+    }
+}
+notConnected = true
+const connectOnce = async () => {
+    if (notConnected) {
+        try {
+            // if (notConnected){
+            await client_db.connect();
+            notConnected = false
+            // return true
+        } catch (error) {
+            console.error(error.stack);
+            // return false;
+        }
+    }
+}
+// const insertSensorNew = async (temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan) => {
+const insertSensorNew = async (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) => {
+    try {
+        // if (client_db.await client_db.connect(); // gets connection
+        await connectOnce()
+        await client_db.query('BEGIN')
 
+        const currentDBTime = new Date().toISOString();
 
+        await client_db.query(
+            // "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES (to_timestamp($1, 'YYYY-MM-DD\"T\"HH24:MI:SS.MSZ'), $2, $3, $4, $5, $6, $7, $8)",
+            "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES (to_timestamp($1, 'YYYY-MM-DD\"T\"HH24:MI:SS.MSZ'), $2, $3, $4, $5, $6, $7, $8)",
+            [currentDBTime, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan]);
 
+        await client_db.query('COMMIT')
+        const res = await client_db.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
+        console.log(res.rows[0])
+        console.log('Transaction completed successfully.')
+    } catch (e) {
+        await client_db.query('ROLLBACK')
+        console.log('Transaction failed to complete.', e)
+    } finally {
+        // client_db.release();
+    }
+}
+//22      62      99      8       14
 
 // OTHER FUNCTIONS
-
 
 
 Modul2chechInputData = (messageArr) => {
@@ -88,16 +166,14 @@ Modul2chechInputData = (messageArr) => {
 }
 
 
-
 clientMQTT.on('message', function (topic, message) {
     messageArr = message.toString().split(" ")
     Modul2chechInputData(messageArr);
-    insertSensor(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4],light, water_pump, fan)
-    console.log("sent to function insertSensor:\n" , messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4],light, water_pump, fan)
+    console.log(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    // insertSensor(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    insertSensorNew(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    // console.log("sent to function insertSensor:\n", messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
 })
-
-
-
 
 
 // ##################################################################
@@ -176,7 +252,6 @@ const connectDb = async () => {
     }
 }
 // connectDb()*/
-
 
 
 /*const insertSensorOnOff = async (light, water_pump, fan) => {

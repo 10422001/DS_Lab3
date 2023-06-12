@@ -10,7 +10,7 @@ const credentials = {
 }
 
 const db_client = new Client(credentials)
-exports.db_client = db_client
+exports.client_db = db_client
 // ## Dashboard functions    ############################################
 function printHeader(res) {
     let headersColum = "";
