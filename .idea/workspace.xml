@@ -5,23 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58fcbb75-8bfd-4fb2-ad4f-b230ad179c87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DSLab3Ang.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DSLab3Ang/src/app/app.component_old.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DSLab3Ang/src/app/db.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DSLab3Ang/src/db_client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DSLab3Ang/src/node_api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../asdasdq1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../home-starter.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab2/DS_Lab3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab2/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab3/DS_Lab3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab3/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3/DS_Lab_3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DS_Lab_3_fin/DS_Lab_3_fin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher_new_cp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscriber_new_cp.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/time.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publisher_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/publisher_new.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subscriber_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber_new.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time.js" beforeDir="false" afterPath="$PROJECT_DIR$/time.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,8 +59,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "javascript.nodejs.core.library.configured.version": "20.1.0",
-    "javascript.nodejs.core.library.typings.version": "20.1.0",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.3.0",
+    "javascript.nodejs.core.library.typings.version": "20.3.0",
     "last_opened_file_path": "/Users/dominikocsofszki/Uni/univim/DSystem/p3/DS_final_Lab3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,28 +80,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.subscriber_new.js">
-    <configuration name="dashboard.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/dashboard.js" working-dir="$PROJECT_DIR$">
+    <configuration name="db_client.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/db_client.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="parser.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/node_modules/pg-protocol/dist/parser.js" working-dir="$PROJECT_DIR$/node_modules/pg-protocol/dist">
+    <configuration name="publisher_new_cp.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher_new_cp.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="publisher_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher_new.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="subscriber_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new.js" working-dir="$PROJECT_DIR$">
+    <configuration name="subscriber_new_cp.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new_cp.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="time.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/time.js" working-dir="$PROJECT_DIR$">
+    <configuration name="subscriber_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.subscriber_new.js" />
         <item itemvalue="Node.js.publisher_new.js" />
-        <item itemvalue="Node.js.parser.js" />
-        <item itemvalue="Node.js.time.js" />
-        <item itemvalue="Node.js.dashboard.js" />
+        <item itemvalue="Node.js.db_client.js" />
+        <item itemvalue="Node.js.publisher_new_cp.js" />
+        <item itemvalue="Node.js.subscriber_new_cp.js" />
       </list>
     </recent_temporary>
   </component>
@@ -105,7 +114,9 @@
       <option name="presentableId" value="Default" />
       <updated>1686206400777</updated>
       <workItem from="1686206401939" duration="6226000" />
-      <workItem from="1686212720002" duration="7175000" />
+      <workItem from="1686212720002" duration="7782000" />
+      <workItem from="1686314987038" duration="1392000" />
+      <workItem from="1686498981640" duration="12577000" />
     </task>
     <servers />
   </component>
@@ -116,5 +127,17 @@
         <option value="$PROJECT_DIR$/dashboard.js" />
       </list>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/subscriber_new_cp.js</url>
+          <line>66</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
