@@ -92,7 +92,6 @@ const connectOnce = async () => {
         }
     }
 }
-// const insertSensorNew = async (temperature, luminosity, airHumidity, soilHumidity, light, water_pump, fan) => {
 const insertSensorNew = async (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) => {
     try {
         // if (client_db.await client_db.connect(); // gets connection
@@ -110,10 +109,13 @@ const insertSensorNew = async (timestamp, temperature, luminosity, air_humidity,
         const res = await client_db.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
         console.log(res.rows[0])
         console.log('Transaction completed successfully.')
+
     } catch (e) {
         await client_db.query('ROLLBACK')
         console.log('Transaction failed to complete.', e)
     } finally {
+
+
         // client_db.release();
     }
 }

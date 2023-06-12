@@ -21,7 +21,9 @@
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/time.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/db_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/publisher_new.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subscriber_new.js" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber_new.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +77,10 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.publisher_new.js">
+  <component name="RunManager" selected="Node.js.db_client.js">
+    <configuration name="dashboard.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/dashboard.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="db_client.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/db_client.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -85,19 +90,16 @@
     <configuration name="publisher_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/publisher_new.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="subscriber_new_cp.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new_cp.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
     <configuration name="subscriber_new.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/subscriber_new.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.db_client.js" />
         <item itemvalue="Node.js.publisher_new.js" />
         <item itemvalue="Node.js.subscriber_new.js" />
-        <item itemvalue="Node.js.db_client.js" />
+        <item itemvalue="Node.js.dashboard.js" />
         <item itemvalue="Node.js.publisher_new_cp.js" />
-        <item itemvalue="Node.js.subscriber_new_cp.js" />
       </list>
     </recent_temporary>
   </component>
@@ -112,7 +114,7 @@
       <workItem from="1686206401939" duration="6226000" />
       <workItem from="1686212720002" duration="7782000" />
       <workItem from="1686314987038" duration="1392000" />
-      <workItem from="1686498981640" duration="21198000" />
+      <workItem from="1686498981640" duration="23062000" />
     </task>
     <servers />
   </component>

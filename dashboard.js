@@ -8,7 +8,7 @@ const credentials = {
     password: process.env.DB_PASSWORD,
     port: 5432
 }
-const connectDb = async () => {
+/*const connectDb = async () => {
     const client = new Client(credentials)
 
     try {
@@ -40,4 +40,4 @@ const connectDb = async () => {
         console.log(error)
     }
 }
-connectDb()
+connectDb()*/

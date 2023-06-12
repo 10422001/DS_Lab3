@@ -19,7 +19,7 @@ newMessage_fillRandomSensor = (nrPlusMinus) => {
 }
 
 client.on('connect', function () {
-    periodSensors = 15000;
+    periodSensors = 1000;
     setInterval(function () {
         client.publish('dom', newMessage_fillRandomSensor(nrPlusMinus=2))
     }, periodSensors)

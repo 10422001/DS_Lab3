@@ -1,4 +1,3 @@
-
 const {Client} = require("pg")
 
 const credentials = {
@@ -10,20 +9,25 @@ const credentials = {
 }
 
 const db_client = new Client(credentials)
+const db_client2 = new Client(credentials)
 exports.client_db = db_client
+
 // ## Dashboard functions    ############################################
 function printHeader(res) {
     let headersColum = "";
     for (let i = 0; i < res.fields.length; i++) {
-        headersColum += res.fields[i].name +"\t\t "
+        headersColum += res.fields[i].name + "\t"
+        if (i == 0 | i == 5) headersColum += "\t"
     }
     console.log(headersColum)
 }
+
 function printXItems(res, itemsToShow) {
     for (let i = 0; i < itemsToShow; i++) {
         let row = ""
         for (let j = 0; j < res.fields.length; j++) {
-            row += res.rows[i][res.fields[j].name] +"\t\t "
+            row += res.rows[i][res.fields[j].name] + "\t"
+            if (j == 0 | j == 1 | j == 2 | j == 3 | j == 4 | j == 5 | j == 6) row += "\t "
         }
         console.log(row)
     }
@@ -32,25 +36,30 @@ function printXItems(res, itemsToShow) {
 // ##############################################
 
 const dashboard = async () => {
-    // const client = new Client(credentials)
+    const db_client = new Client(credentials)
     try {
         await db_client.connect()
-        const res = await db_client.query("SELECT * from sensor ORDER BY timestamp ASC") //console.log(res)
-        await db_client.end()
+        const res = await db_client.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
+        // await db_client.end()
         printHeader(res)
-        printXItems(res, 5)
-
-
+        printXItems(res, 10)
+        console.log(" ")
 
     } catch (error) {
         console.log(error)
     }
 }
 
+const dashboardInterval = () => {
+
+    setInterval(function () {
+        dashboard()
+    }, 1000)
+}
+exports.dashboardInterval = dashboardInterval
+// dashboardInterval()
 // dashboard()
-
-
-
+dashboardInterval()
 // const connectDb = async () => {
 //     // const client = new Client(credentials)
 //
