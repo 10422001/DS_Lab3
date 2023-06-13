@@ -7,7 +7,7 @@ const credentials = {
     password: process.env.DB_PASSWORD,
     port: 5432
 }
-const dashboard = async () => {
+const dashboard_old = async () => {
     const client = new Client(credentials)
 
     try {
@@ -49,4 +49,4 @@ const dashboard = async () => {
         console.log(error)
     }
 }
-dashboard()
+dashboard_old()
