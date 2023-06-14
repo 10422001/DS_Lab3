@@ -2,6 +2,7 @@
   "name": "DS_final_Lab3",
   "version": "1.0.0",
   "dependencies": {
+    "express": "^4.18.2",
     "mqtt": "^4.3.7",
     "pg": "^8.11.0",
     "pq": "^0.0.3",

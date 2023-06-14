@@ -1,26 +1,28 @@
-// const {dashboardInterval} = require('./db_client.js')
-//
-//
-// dashboardInterval()
+const pg = require('pg')
 
-/*
-const {Client} = require("pg");
-const {pool} = require("./db_client_pool.js")
-*/
 const credentials = {
-    user: "dominikocsofszki2",
+    user: "dominikocsofszki",
     host: "localhost",
     database: "dominikocsofszki",
     password: process.env.DB_PASSWORD,
     port: 5432
 }
-const { Pool } = require('pg')
-const pool = new Pool({
-    credentials ,
-    max: 20,
-    idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 2000,
-})
+
+const pool = new pg.Pool(credentials);
+
+exports.pool = pool
+const db_client = new Client(credentials)
+exports.client_db = db_client
+
+// const pool = new Pool({
+//     host: 'localhost',
+//     user: 'database-user',
+//     max: 20,
+//     idleTimeoutMillis: 30000,
+//     connectionTimeoutMillis: 2000,
+// })
+
+
 
 function printHeader(res) {
     let headersColum = "";
@@ -42,17 +44,13 @@ function printXItems(res, itemsToShow) {
 }
 
 const dashboard = async () => {
-    // const db_client = new Client(credentials)
-
+    const db_client = new Client(credentials)
     try {
-        const db_client = await pool.connect()
-
-        // await db_client.connect()
+        await db_client.connect()
         const res = await db_client.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
         printHeader(res)
         printXItems(res, 10)
         console.log(" ")
-        db_client.release()
 
     } catch (error) {
         console.log(error)
@@ -66,4 +64,4 @@ const dashboardInterval = () => {
     }, 1000)
 }
 exports.dashboardInterval = dashboardInterval
-dashboardInterval()
+// dashboardInterval()

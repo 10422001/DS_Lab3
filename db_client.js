@@ -11,7 +11,6 @@ const credentials = {
 const db_client = new Client(credentials)
 exports.client_db = db_client
 
-// ## Dashboard functions    ############################################
 function printHeader(res) {
     let headersColum = "";
     for (let i = 0; i < res.fields.length; i++) {
@@ -20,7 +19,6 @@ function printHeader(res) {
     }
     console.log(headersColum)
 }
-
 function printXItems(res, itemsToShow) {
     for (let i = 0; i < itemsToShow; i++) {
         let row = ""
@@ -32,14 +30,11 @@ function printXItems(res, itemsToShow) {
     }
 }
 
-// ##############################################
-
 const dashboard = async () => {
     const db_client = new Client(credentials)
     try {
         await db_client.connect()
         const res = await db_client.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
-        // await db_client.end()
         printHeader(res)
         printXItems(res, 10)
         console.log(" ")
