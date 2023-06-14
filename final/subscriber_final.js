@@ -87,7 +87,7 @@ clientMQTT.on('connect',
         clientMQTT.subscribe('dom');
     })
 
-const {client_db} = require('./db_client.js')
+const {client_db} = require('../db_client.js')
 
 // define variables, and Date
 let light = false

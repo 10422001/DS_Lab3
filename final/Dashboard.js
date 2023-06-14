@@ -46,11 +46,11 @@ const dashboard = async () => {
 
     try {
         const db_client = await pool.connect()
-
+        const nrPrintItems = 10
         // await db_client.connect()
         const res = await db_client.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
         printHeader(res)
-        printXItems(res, 10)
+        printXItems(res, nrPrintItems)
         console.log(" ")
         db_client.release()
 

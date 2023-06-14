@@ -1,6 +1,6 @@
 const express = require('express');
 const node_api = express();
-const {getRndInteger} = require('./publisher_final.js')
+const {getRndInteger} = require('./final/publisher_final.js')
 node_api.get('/sensor', (req, res) => {
     /*
         const date = new Date();

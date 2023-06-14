@@ -87,7 +87,7 @@ clientMQTT.on('connect',
         clientMQTT.subscribe('dom');
     })
 
-const {client_db} = require('./db_client.js')
+const {client_db} = require('../db_client.js')
 
 // define variables, and Date
 let light = false
@@ -102,4 +102,5 @@ clientMQTT.on('message', function (topic, message) {
     // Modul2chechInputData(messageArr);
     console.log(currentTime,messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
     // insertSensorNew(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    console.log()
 })
