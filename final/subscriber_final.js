@@ -1,4 +1,3 @@
-
 const clientMQTT = require('mqtt').connect('mqtt://broker.hivemq.com')
 
 const connectOnce = async () => {
@@ -24,6 +23,7 @@ const insertSensorNew = async (timestamp, temperature, luminosity, air_humidity,
             // "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES (to_timestamp($1, 'YYYY-MM-DD\"T\"HH24:MI:SS.MSZ'), $2, $3, $4, $5, $6, $7, $8)",
             "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
             [currentDBTime, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan]);
+        // return temp + " " + soil + " " + air + " " + pH + " " + luminosity + " " + new Date().toString()
 
         await client_db.query('COMMIT')
         const res = await client_db.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
@@ -100,5 +100,13 @@ clientMQTT.on('message', function (topic, message) {
     messageArr = message.toString().split(" ")
     Modul2chechInputData(messageArr);
     console.log(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    // return temp + " " + soil + " " + air + " " + pH + " " + luminosity + " " + new Date().toString()
+    temperature = messageArr[0]
+    soil_humidity = messageArr[1]
+    air_humidity = messageArr[2]
+    pH = messageArr[3]
+    luminosity = messageArr[4]
+    // dateTime = messageArr[5:-1]
+    // insertSensorNew(timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan)
     insertSensorNew(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
 })

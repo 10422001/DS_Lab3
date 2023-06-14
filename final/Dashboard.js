@@ -26,7 +26,8 @@ function printHeader(res) {
     let headersColum = "";
     for (let i = 0; i < res.fields.length; i++) {
         headersColum += res.fields[i].name + "\t"
-        if (i == 0 | i == 5) headersColum += "\t"
+        // if (i == 0 | i == 5) headersColum += "\t"
+        if ( i==4|i==6) headersColum += "\t"
     }
     console.log(headersColum)
 }
@@ -46,7 +47,7 @@ const dashboard = async () => {
 
     try {
         const db_client = await pool.connect()
-        const nrPrintItems = 10
+        const nrPrintItems = 10 //<<<<<<<<<<<<<<<<<Change here for printing more
         // await db_client.connect()
         const res = await db_client.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)
         printHeader(res)

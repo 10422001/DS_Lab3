@@ -21,12 +21,10 @@
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/mqtt-demo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mqtt-demo/time.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_node.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard_listener.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/dashboard_listener.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_client_pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/db_client_pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher_final.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/publisher_final.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber_final.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/subscriber_final.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/dashboard_listener.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/dashboard_listener.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/publisher_final.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/publisher_final.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/subscriber_final.js" beforeDir="false" afterPath="$PROJECT_DIR$/final/subscriber_final.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.subscriber_final.js">
+  <component name="RunManager" selected="Node.js.publisher_final.js">
     <configuration name="Dashboard.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/final/Dashboard.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -101,10 +99,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.subscriber_final.js" />
         <item itemvalue="Node.js.publisher_final.js" />
-        <item itemvalue="Node.js.Dashboard.js" />
         <item itemvalue="Node.js.dashboard_listener.js" />
+        <item itemvalue="Node.js.Dashboard.js" />
+        <item itemvalue="Node.js.subscriber_final.js" />
         <item itemvalue="Node.js.dashboard2.js" />
       </list>
     </recent_temporary>
@@ -125,7 +123,7 @@
       <workItem from="1686633433118" duration="802000" />
       <workItem from="1686648383942" duration="3469000" />
       <workItem from="1686708853638" duration="5552000" />
-      <workItem from="1686752609492" duration="762000" />
+      <workItem from="1686752609492" duration="4194000" />
     </task>
     <servers />
   </component>

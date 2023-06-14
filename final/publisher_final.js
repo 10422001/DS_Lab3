@@ -11,9 +11,9 @@ newMessage_fillRandomSensor = (nrPlusMinus) => {
     air = getRndInteger(70- nrPlusMinus, 100+ nrPlusMinus).toString()
     pH = getRndInteger(5- 1, 7+ 1).toString()
     luminosity = getRndInteger(0 - nrPlusMinus, 30+ nrPlusMinus).toString()
-    console.log(temp + "\t" + soil + "\t" + air + "\t" + pH + "\t" + luminosity)
+    console.log(temp + "\t" + soil + "\t" + air + "\t" + pH + "\t" + luminosity+ "\t" + new Date().toString())
     // return temp + " " + soil + " " + air + " " + pH + " " + luminosity
-    return temp + " " + soil + " " + air + " " + pH + " " + luminosity
+    return temp + " " + soil + " " + air + " " + pH + " " + luminosity + " " + new Date().toString()
 }
 
 client.on('connect', function () {

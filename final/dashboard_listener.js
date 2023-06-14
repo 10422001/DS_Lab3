@@ -98,9 +98,14 @@ notConnected = true
 
 clientMQTT.on('message', function (topic, message) {
     messageArr = message.toString().split(" ")
-    currentTime = dateObject.toString().split(" ")[4].split(":").slice(0, 2).join(":")
+    // currentTime = dateObject.toString().split(" ")[4].split(":").slice(0, 2).join(":")
+    currentTime = dateObject.toString()
     // Modul2chechInputData(messageArr);
-    console.log(currentTime,messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    console.log(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan, currentTime)
+    // console.log(currentTime,messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
+    // console.log(currentTime,messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan, messageArr[5])
     // insertSensorNew(messageArr[0], messageArr[1], messageArr[2], messageArr[3], messageArr[4], light, water_pump, fan)
-    console.log()
+    for (let i = 0; i <= 10; i++) {
+        console.log()
+    }
 })
