@@ -12,14 +12,18 @@ const connectOnce = async () => {
 }
 const insertSensorNew = async (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) => {
     try {
-        const client_db = await pool.connect()
+        // if (client_db.await client_db.connect(); // gets connection
+        await connectOnce()
         await client_db.query('BEGIN')
+
         const currentDBTime = new Date().toISOString();
         console.log(currentDBTime)
         await client_db.query(
             // "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES (to_timestamp($1, 'YYYY-MM-DD\"T\"HH24:MI:SS.MSZ'), $2, $3, $4, $5, $6, $7, $8)",
+            // "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES (to_timestamp($1, 'YYYY-MM-DD\"T\"HH24:MI:SS.MSZ'), $2, $3, $4, $5, $6, $7, $8)",
             "INSERT INTO sensor (timestamp, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
             [currentDBTime, temperature, luminosity, air_humidity, soil_humidity, light, water_pump, fan]);
+        // return temp + " " + soil + " " + air + " " + pH + " " + luminosity + " " + new Date().toString()
 
         await client_db.query('COMMIT')
         const res = await client_db.query("SELECT * from sensor ORDER BY timestamp DESC") //console.log(res)

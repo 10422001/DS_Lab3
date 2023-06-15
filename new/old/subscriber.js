@@ -42,6 +42,7 @@ var mqtt = require('mqtt')
 
 var client = mqtt.connect('mqtt://broker.hivemq.com')
 client.on('connect', function () {
+
     client.subscribe('dom_temperature');
     client.subscribe('dom_soil_humidity')
     client.subscribe('dom_air_humidity')
@@ -49,41 +50,31 @@ client.on('connect', function () {
     client.subscribe('dom_luminosity')
 })
 
-
-
-let timestamp=-99
-
-let temperature=-99
-let luminosity= -99
-let airHumidity=-99
-let soilHumidity=-99
-let ph=-99
-
+// client.on('message', function (topic, message) {
+//     messageArr = message.toString().split(" ")
+//     insertSensor (messageArr[0],messageArr[1], messageArr[2], messageArr[3], messageArr[4], messageArr[5])
+//     console.log(messageArr)
 client.on('message', function (topic, message) {
+    // insertSensor (timestamp, temperature, luminosity, airHumidity, soilHumidity)
+    // insertSensor ('1999-08-05 04:05:07',topic, topic, topic, topic, topic)
     switch (topic.toString()) {
         case 'dom_temperature':
-            temperature = message.toString()
-            console.log("dom_temperature: " + temperature)
+            console.log("dom_temperature: " + message.toString())
             break;
         case 'dom_soil_humidity':
-            soilHumidity = message.toString()
-            console.log("dom_soil_humidity: " + soilHumidity)
+            console.log("dom_soil_humidity: " + message.toString())
             break;
         case 'dom_air_humidity':
-            airHumidity = message.toString()
-            console.log("dom_air_humidity: " + airHumidity)
+            console.log("dom_air_humidity: " + message.toString())
             break;
         case 'dom_pH_ranging':
-            ph = message.toString()
-            console.log("dom_pH_ranging: " + ph)
+            console.log("dom_pH_ranging: " + message.toString())
             break;
-        // case 'dom_time':
-        //     temperature = message.toString()
-        //     console.log("dom_time: " + message.toString())
-        //     break;
+        case 'dom_time':
+            console.log("dom_time: " + message.toString())
+            break;
         case 'dom_luminosity':
-            luminosity = message.toString()
-            console.log("dom_luminosity: " + luminosity)
+            console.log("dom_luminosity: " + message.toString())
             break;
 
         default:
@@ -91,14 +82,31 @@ client.on('message', function (topic, message) {
     }
 })
 
-// queryDb('sensor', 26)
-
-
-
-
-
 const date = new Date()
 
 setInterval(function () {
 insertSensor(date.toString(), temperature, luminosity, airHumidity, soilHumidity)
 }, 5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+queryDb('sensor', 26)
