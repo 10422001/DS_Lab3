@@ -88,25 +88,4 @@ setInterval(function () {
 insertSensor(date.toString(), temperature, luminosity, airHumidity, soilHumidity)
 }, 5000)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 queryDb('sensor', 26)

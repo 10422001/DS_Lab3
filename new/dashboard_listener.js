@@ -128,6 +128,10 @@ client.on('connect', function () {
     client.subscribe('dom_air_humidity')
     client.subscribe('dom_pH_ranging')
     client.subscribe('dom_luminosity')
+
+    client.subscribe('dom_fan')
+    client.subscribe('dom_water_pump')
+    client.subscribe('dom_light')
 })
 
 client.on('message', function (topic, message) {
@@ -156,26 +160,6 @@ client.on('message', function (topic, message) {
             luminosity = message.toString().split(" ")[1]
             // console.log("dom_luminosity: " + luminosity)
             break;
-
-        default:
-            console.log("default: " + message.toString())
-    }
-})
-// var mqtt = require('mqtt')
-const listenclient = require('mqtt').connect('mqtt://broker.hivemq.com')
-listenclient.on('connect', function () {
-    // listenclient.subscribe('dom_temperature');
-    // listenclient.subscribe('dom_soil_humidity')
-    // listenclient.subscribe('dom_air_humidity')
-    // listenclient.subscribe('dom_pH_ranging')
-    // listenclient.subscribe('dom_luminosity')
-    listenclient.subscribe('dom_fan')
-    listenclient.subscribe('dom_water_pump')
-    listenclient.subscribe('dom_light')
-})
-
-listenclient.on('message', function (topic, message) {
-    switch (topic.toString()) {
         case 'dom_fan':
             fan = message.toString().split(" ")[1]
             // console.log("dom_temperature: " + fan)
@@ -188,15 +172,49 @@ listenclient.on('message', function (topic, message) {
             light = message.toString().split(" ")[1]
             // console.log("dom_light: " + light)
             break;
-    }}
-)
+
+        default:
+            console.log("default: " + message.toString())
+    }
+})
+// var mqtt = require('mqtt')
+// const listenclient = require('mqtt').connect('mqtt://broker.hivemq.com')
+// listenclient.on('connect', function () {
+//     // listenclient.subscribe('dom_temperature');
+//     // listenclient.subscribe('dom_soil_humidity')
+//     // listenclient.subscribe('dom_air_humidity')
+//     // listenclient.subscribe('dom_pH_ranging')
+//     // listenclient.subscribe('dom_luminosity')
+//     listenclient.subscribe('dom_fan')
+//     listenclient.subscribe('dom_water_pump')
+//     listenclient.subscribe('dom_light')
+// })
+//
+// client.on('message', function (topic, message) {
+//     // console.log('inside listenclient')
+//     // console.log(topic.toString(), message.toString())
+//     switch (topic.toString()) {
+//         case 'dom_fan':
+//             fan = message.toString().split(" ")[1]
+//             // console.log("dom_temperature: " + fan)
+//             break;
+//         case 'dom_water_pump':
+//             water_pump = message.toString().split(" ")[1]
+//             // console.log("dom_temperature: " + water_pump)
+//             break;
+//         case 'dom_light':
+//             light = message.toString().split(" ")[1]
+//             // console.log("dom_light: " + light)
+//             break;
+//     }}
+// )
 
 // client.publish("dom_fan", fan.toString())
 // client.publish("dom_water_pump", water_pump.toString())
 // client.publish("dom_light", light.toString())
 
 setInterval(function () {
-
+    console.log(VARS.temperature, VARS.luminosity, VARS.airHumidity, VARS.soilHumidity, VARS.ph, VARS.light, VARS.water_pump, VARS.fan, new Date().toISOString())
     console.log(temperature, luminosity, airHumidity, soilHumidity, ph, light, water_pump, fan, new Date().toISOString())
     for (let i = 0; i <= 10; i++) {
         console.log()

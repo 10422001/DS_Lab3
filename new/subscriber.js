@@ -49,6 +49,7 @@ client.on('connect', function () {
     client.subscribe('dom_air_humidity')
     client.subscribe('dom_pH_ranging')
     client.subscribe('dom_luminosity')
+
 })
 
 
